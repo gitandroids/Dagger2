@@ -2,8 +2,8 @@ package gitandroid.com.dagger2example;
 
 import dagger.Component;
 
-@Component     // The most important part of Dagger.
+@Component(modules = WheelsModule.class)     // The most important part of Dagger.
 public interface CarComponent {   // The Injector.
-    //Car getCar();
+    Car getCar();
     void inject(MainActivity mainActivity);
 }

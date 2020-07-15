@@ -12,8 +12,9 @@ public class Car {
     //This is called constructor injection . You can only use Inject annotation on a single constructor in the class.
     // Now dagger knows that this is the way to instantiate the car object. This is constructor injection .
     @Inject
-    public Car(Wheels wheels) {
+    public Car(Wheels wheels,Engine engine) {
         this.wheels = wheels;
+        this.engine = engine;
         Log.d(TAG, "Constructor Injection called first.");
     }
     // Method Injection.If you have to pass the injected object itself to the dependency
