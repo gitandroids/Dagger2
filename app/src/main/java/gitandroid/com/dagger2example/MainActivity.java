@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CarComponent component = DaggerCarComponent.builder()    //.create() if the constructors has no arguments.
-                .dieselEngineModule(new DieselEngineModule(100))
+                .horsePower(150)
+                .engineCapacity(1400)
                 .build();
         component.inject(this); //FIELD INJECTION :take this activity and inject the variables start with Inject. In this case Car class.
         //car = component.getCar();
