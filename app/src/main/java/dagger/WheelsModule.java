@@ -5,7 +5,7 @@ import car.Tires;
 import car.Wheels;
 
 @Module
-public class WheelsModule {
+public abstract class WheelsModule {   // If all of @provides are static then make the class abstract
     // make them static for better performance . Dagger call them directly on the class without instantiating.
     @Provides
     static Rims provideRims() {

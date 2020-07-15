@@ -7,8 +7,10 @@ import android.os.Bundle;
 import javax.inject.Inject;
 
 import car.Car;
+import car.DieselEngine;
 import dagger.CarComponent;
 import dagger.DaggerCarComponent;
+import dagger.DieselEngineModule;
 
 public class MainActivity extends AppCompatActivity {
     @Inject
@@ -17,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CarComponent component = DaggerCarComponent.create();
+        CarComponent component = DaggerCarComponent.builder()    //.create() if the constructors has no arguments.
+                .dieselEngineModule(new DieselEngineModule(100))
+                .build();
         component.inject(this); //FIELD INJECTION :take this activity and inject the variables start with Inject. In this case Car class.
         //car = component.getCar();
         car.drive();
