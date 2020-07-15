@@ -6,7 +6,7 @@ import javax.inject.Inject;  // If you want to use different dependency injectio
                              // JSR 330 - Java Specification Request. The annotations that standardized.
 public class Car {
     private static final String TAG = "Car";
-    private Engine engine;
+    private Engine engine;  // Engine and wheels are dependencies of Car.
     private Wheels wheels;
     //This is called constructor injection . You can only use Inject annotation on a single constructor in the class.
     // Now dagger knows that this is the way to instantiate the car object. This is constructor injection .
