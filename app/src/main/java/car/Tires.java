@@ -1,4 +1,4 @@
-package gitandroid.com.dagger2example;
+package car;
 
 import android.util.Log;
 

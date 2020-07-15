@@ -1,7 +1,8 @@
-package gitandroid.com.dagger2example;
+package dagger;
 
-import dagger.Module;
-import dagger.Provides;
+import car.Rims;
+import car.Tires;
+import car.Wheels;
 
 @Module
 public class WheelsModule {

@@ -1,6 +1,4 @@
-package gitandroid.com.dagger2example;
-
-import javax.inject.Inject;
+package car;
 
 public class Wheels {
     // We don't own this class so we can not annotate it with @Inject

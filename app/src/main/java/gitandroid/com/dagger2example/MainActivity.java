@@ -6,8 +6,13 @@ import android.os.Bundle;
 
 import javax.inject.Inject;
 
+import car.Car;
+import dagger.CarComponent;
+import dagger.DaggerCarComponent;
+
 public class MainActivity extends AppCompatActivity {
-    @Inject Car car ;   // For FIELD INJECTION we can not make variable private or final.
+    @Inject
+    Car car ;   // For FIELD INJECTION we can not make variable private or final.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
